@@ -7,7 +7,7 @@
  */
 int print_int(int num)
 {
-	int len = 10;
+	int len = 1;
 	int count = 0;
 
 	if (num < 0)

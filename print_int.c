@@ -14,7 +14,7 @@ int print_int(int num)
 	{
 		_putchar('-');
 		count++;
-		return count + (print_int(num * -1));
+		return (count + print_int(num * -1));
 	}
 
 	while (num / len > 10)

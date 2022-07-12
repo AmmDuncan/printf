@@ -13,7 +13,7 @@ int print_int(int num)
 	if (num < 0)
 	{
 		_putchar('-');
-		return print_int(num * -1);
+		return (print_int(num * -1));
 	}
 
 	while (num / len > 10)

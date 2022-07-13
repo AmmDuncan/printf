@@ -15,13 +15,13 @@ int main(void)
 
 	res *= 2;
 	_printf("%X + %X = %X\n", INT_MAX, INT_MAX, res);
-	// len2 = printf("%X + %X = %X\n", INT_MAX, INT_MAX, res);
-	// fflush(stdout);
-	// if (len != len2)
-	// {
-	// 	printf("Lengths differ.\n");
-	// 	fflush(stdout);
-	// 	return (1);
-	// }
+	len2 = printf("%u + %i = %X\n", INT_MAX, INT_MAX, res);
+	fflush(stdout);
+	if (len != len2)
+	{
+		printf("Lengths differ.\n");
+		fflush(stdout);
+		return (1);
+	}
 	return (0);
 }

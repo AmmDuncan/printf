@@ -11,7 +11,7 @@ int print_string(char *str)
 
 	if (!str)
 	{
-		str = "(null)";
+		str = "null";
 	}
 
 	while (*str)

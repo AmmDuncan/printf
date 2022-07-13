@@ -27,8 +27,8 @@ int print_int(int num)
 		int first = num / len;
 
 		putnum(first);
-		num = num % len;
-		len = len / 10;
+		num %=  len;
+		len /= 10;
 		count++;
 	}
 

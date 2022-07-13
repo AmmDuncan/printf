@@ -8,7 +8,8 @@
  */
 int handle_format(char spec, va_list list)
 {
-	int count = 0, add_count = 0;
+	int count = 0;
+	int add_count = 0;
 
 	switch (spec)
 	{
@@ -19,8 +20,8 @@ int handle_format(char spec, va_list list)
 	case 's':
 		add_count = print_string(va_arg(list, char *));
 		break;
-	case 'd':
 	case 'i':
+	case 'd':
 	case 'u':
 	case 'o':
 	case 'x':

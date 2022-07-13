@@ -15,8 +15,7 @@ int print_oct(unsigned int num)
 	if (num == 0)
 	{
 		putnum(0);
-		putnum(0);
-		return (2);
+		return (1);
 	}
 
 	while (num >= base)

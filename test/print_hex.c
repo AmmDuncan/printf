@@ -16,8 +16,7 @@ int print_HEX(unsigned int num)
 	if (num == 0)
 	{
 		putnum(0);
-		putnum(0);
-		return (2);
+		return (1);
 	}
 
 	while (num >= base)
@@ -75,8 +74,7 @@ int print_hex(unsigned int num)
 	if (num == 0)
 	{
 		putnum(0);
-		putnum(0);
-		return (2);
+		return (1);
 	}
 
 	while (num >= base)

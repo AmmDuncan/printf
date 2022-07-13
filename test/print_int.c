@@ -16,7 +16,6 @@ int print_int(int num)
 		isNegative = 1;
 		_putchar('-');
 		count++;
-		// return (count + print_int(num * -1));
 	}
 
 	while (!isNegative && num / len >= 10)
@@ -32,6 +31,7 @@ int print_int(int num)
 	while (len >= 1)
 	{
 		int first = num / len;
+
 		if (isNegative)
 		{
 			first *= -1;

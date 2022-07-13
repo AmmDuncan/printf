@@ -40,6 +40,10 @@ int main(void)
 	_printf("%d - %d = %d\n", 1024, 2048, -1024);
 	printf("%d - %d = %d\n", 1024, 2048, -1024);
 	_printf("%d + %d = %d\n", INT_MIN, INT_MAX, (INT_MIN + INT_MAX));
-	_printf("%i", -1024);
+	_printf("%i\n", -1024);
+	_printf("%b\n", 1024);
+	_printf("%b\n", -1024);
+	_printf("%b\n", 0);
+	_printf("%b", UINT_MAX);
 	return (0);
 }

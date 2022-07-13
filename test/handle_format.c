@@ -24,6 +24,9 @@ int handle_format(char spec, va_list list)
 	case 'i':
 		add_count = print_int(va_arg(list, int));
 		break;
+	case 'b':
+		add_count = print_binary(va_arg(list, unsigned int));
+		break;
 	default:
 		_putchar('%');
 		_putchar(spec);

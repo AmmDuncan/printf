@@ -12,5 +12,6 @@ int _printf(const char *format, ...);
 int handle_format(char spec, va_list list);
 int print_string(char *str);
 int print_int(int num);
+int print_binary(unsigned int num);
 
 #endif

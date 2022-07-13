@@ -1,15 +1,16 @@
 #include "main.h"
 
 /**
- * print_binary - convert unsigned int to binary
+ * print_oct - convert unsigned int to base 8
  * @num: unsigned integer to convert
  * Return: number of numbers printed
  */
-int print_binary(unsigned int num)
+int print_oct(unsigned int num)
 {
 	int *rems = malloc(sizeof(int) * 1024);
 	int *start = rems;
 	int count = 0;
+	unsigned int base = 8;
 
 	if (num == 0)
 	{
@@ -18,13 +19,13 @@ int print_binary(unsigned int num)
 		return (2);
 	}
 
-	while (num >= 2)
+	while (num >= base)
 	{
-		*rems = num % 2;
+		*rems = num % base;
 		rems++;
-		num /= 2;
+		num /= base;
 	}
-	*rems = num % 2;
+	*rems = num % base;
 
 	while (rems != start)
 	{

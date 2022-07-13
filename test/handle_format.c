@@ -8,8 +8,7 @@
  */
 int handle_format(char spec, va_list list)
 {
-	int count = 0;
-	int add_count = 0;
+	int count = 0, add_count = 0;
 
 	switch (spec)
 	{
@@ -22,7 +21,11 @@ int handle_format(char spec, va_list list)
 		break;
 	case 'd':
 	case 'i':
-		add_count = print_int(va_arg(list, int));
+	case 'u':
+	case 'o':
+	case 'x':
+	case 'X':
+		add_count = handle_numbers(spec, list);
 		break;
 	case 'b':
 		add_count = print_binary(va_arg(list, unsigned int));

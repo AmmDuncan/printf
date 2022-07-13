@@ -8,6 +8,8 @@
 int main(void)
 {
 	int len, len2;
+	long int l = UINT_MAX + 1024;
+	long int res = UINT_MAX * 2;
 
 	len = _printf("Let's try to printf a simple sentence.\n");
 	len2 = printf("Let's try to printf a simple sentence.\n");
@@ -44,6 +46,19 @@ int main(void)
 	_printf("%b\n", 1024);
 	_printf("%b\n", -1024);
 	_printf("%b\n", 0);
-	_printf("%b", UINT_MAX);
+	_printf("%b\n", UINT_MAX);
+	_printf("%b\n", l);
+	_printf("%b + %b = %b\n", INT_MAX, INT_MAX, res);
+	len = _printf("%b - %b = %b\n", 2048, 1024, 1024);
+	len2 = printf("100000000000 - 10000000000 = 10000000000\n");
+	_printf("%u\n", -1024);
+	_printf("%u\n", l);
+	_printf("%o\n", 1024);
+	_printf("%o\n", -1024);
+	_printf("There is %o bytes in %o KB\n", 1024, 1);
+	_printf("%o + %o = %o\n", INT_MAX, INT_MAX, res);
+	_printf("%x\n", -1024);
+	_printf("%X\n", -1024);
+	_printf("%X\n", 1024);
 	return (0);
 }

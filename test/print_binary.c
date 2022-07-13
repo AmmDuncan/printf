@@ -11,7 +11,7 @@ int print_binary(unsigned int num)
 	int *start = rems;
 	int count = 0;
 
-	if (!num)
+	if (num == 0)
 	{
 		putnum(0);
 		putnum(0);

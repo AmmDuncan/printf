@@ -39,8 +39,8 @@ int print_HEX(unsigned int num)
 		{
 			print_ALPHA(val);
 		}
-		count++;
 		rems--;
+		count++;
 	}
 
 	last = *start;
@@ -131,6 +131,7 @@ void print_alpha(int num)
 	collection[13] = 'd';
 	collection[14] = 'e';
 	collection[15] = 'f';
+
 	_putchar(collection[num]);
 }
 
@@ -148,5 +149,6 @@ void print_ALPHA(int num)
 	collection[13] = 'D';
 	collection[14] = 'E';
 	collection[15] = 'F';
+
 	_putchar(collection[num]);
 }

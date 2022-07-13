@@ -60,5 +60,10 @@ int main(void)
 	_printf("%x\n", -1024);
 	_printf("%X\n", -1024);
 	_printf("%X\n", 1024);
+	_printf("%o\n", l);
+	_printf("%x\n", 0);
+	_printf("%x\n", UINT_MAX);
+	_printf("%o\n", UINT_MAX);
+	_printf("%u\n", UINT_MAX);
 	return (0);
 }

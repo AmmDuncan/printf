@@ -20,8 +20,8 @@ int handle_format(char spec, va_list list)
 	case 's':
 		add_count = print_string(va_arg(list, char *));
 		break;
-	case 'i':
 	case 'd':
+	case 'i':
 		add_count = print_int(va_arg(list, int));
 		break;
 	default:

@@ -50,7 +50,7 @@ int print_HEX(unsigned int num)
 	}
 	else
 	{
-		print_alpha(last);
+		print_ALPHA(last);
 	}
 	count++;
 

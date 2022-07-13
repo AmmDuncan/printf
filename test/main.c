@@ -1,4 +1,5 @@
 #include "main.h"
+#include <limits.h>
 
 /**
  * main - main function
@@ -24,8 +25,21 @@ int main(void)
 	printf("Len:[%d]\n", len2);
 	len = _printf("Number: %d\n", -329750);
 	len2 = printf("Number: %d\n", -329750);
+	len = _printf("Complete the sentence: You %s nothing, Jon Snow.\n", (char *)0);
+	len2 = printf("Complete the sentence: You %s nothing, Jon Snow.\n", (char *)0);
 	_printf("Len:[%d]\n", len);
 	printf("Len:[%d]\n", len2);
-
+	_printf("%!\n");
+	_printf("%d\n", 1024);
+	_printf("%d\n", -1024);
+	// _printf("%d", INT_MIN);
+	_printf("%d\n", INT_MIN);
+	printf("%d\n", INT_MIN);
+	_printf("There is %d bytes in %d KB\n", 1024, 1);
+	printf("There is %d bytes in %d KB\n", 1024, 1);
+	_printf("%d - %d = %d\n", 1024, 2048, -1024);
+	printf("%d - %d = %d\n", 1024, 2048, -1024);
+	_printf("%d + %d = %d\n", INT_MIN, INT_MAX, (INT_MIN + INT_MAX));
+	_printf("%i", -1024);
 	return (0);
 }

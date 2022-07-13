@@ -9,6 +9,11 @@ int print_string(char *str)
 {
 	int count = 0;
 
+	if (!str)
+	{
+		str = "(null)";
+	}
+
 	while (*str)
 	{
 		_putchar(*str);

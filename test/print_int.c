@@ -9,15 +9,22 @@ int print_int(int num)
 {
 	int len = 1;
 	int count = 0;
+	int isNegative = 0;
 
 	if (num < 0)
 	{
+		isNegative = 1;
 		_putchar('-');
 		count++;
-		return count + (print_int(num * -1));
+		// return (count + print_int(num * -1));
 	}
 
-	while (num / len > 10)
+	while (!isNegative && num / len >= 10)
+	{
+		len *= 10;
+	}
+
+	while (isNegative && num / len <= -10)
 	{
 		len *= 10;
 	}
@@ -25,10 +32,14 @@ int print_int(int num)
 	while (len >= 1)
 	{
 		int first = num / len;
+		if (isNegative)
+		{
+			first *= -1;
+		}
 
 		putnum(first);
-		num = num % len;
-		len = len / 10;
+		num %= len;
+		len /= 10;
 		count++;
 	}
 

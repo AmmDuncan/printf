@@ -25,7 +25,9 @@ int handle_format(char spec, va_list list)
 		add_count = print_int(va_arg(list, int));
 		break;
 	default:
+		_putchar('%');
 		_putchar(spec);
+		add_count = 2;
 	}
 
 	count += add_count;

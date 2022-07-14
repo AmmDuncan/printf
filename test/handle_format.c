@@ -19,11 +19,11 @@ int handle_format(char spec, va_list list)
 	case 's':
 		add_count = print_string(va_arg(list, char *));
 		break;
-	case 'd':
-	case 'i':
 	case 'u':
-	case 'o':
 	case 'x':
+	case 'd':
+	case 'o':
+	case 'i':
 	case 'X':
 		add_count = handle_numbers(spec, list);
 		break;
